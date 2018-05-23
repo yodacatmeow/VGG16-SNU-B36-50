@@ -37,13 +37,13 @@
   - ```freeze_layer``` 
     - True: Freeze the layers except **fc3w**, **fc3b**, **fc4w**, and **fc4b**
     - False: Do not freeze the layers
-  - ```bn```: If this isTRUE,  then turn on batch normalization
+  - ```bn```: If this is TRUE,  then turn on batch normalization
   - ```saver```: If it is TURE, the weights at the last epoch are saved as **.npz**
   - ```fold```: Use *k*-th subsample as the validation set
 - "results": Training loss, validation loss, training accuracy, and validation accuracy are saved to here
-- "test.py": Not used for this work
-- "tsne_input": *TBU*
-- "tsne_conv": *TBU*
+- "test.py": *Not used for this work*
+- "tsne_input": *Not used for this work*
+- "tsne_conv": *Not used for this work*
 
 
 
@@ -52,7 +52,7 @@
 
 - Clone this project ```git clone https://github.com/yodacatmeow/VGG16-SNU-B36-50```
 
-- [Download](https://www.cs.toronto.edu/~frossard/vgg16/vgg16_weights.npz) the pretrained weights to this project path
+- Download the [pretrained weights](https://www.cs.toronto.edu/~frossard/vgg16/vgg16_weights.npz) to this project path
 - Start a process  ```CUDA_VISIBLE_DEVICE=0 python3 main.py``` 
 
   - If you don't prepare TensorFlow GPU version, set ```gpu_device``` in "main.py" as ```gpu_device = 'device:cpu:0'``` and start a process ```python3 main.py```

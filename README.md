@@ -3,7 +3,10 @@
 - An adaptation layer is added to VGG16 for dimension adaption
 - VGG16 is fine-tuned on [SNU-B36-50](https://github.com/yodacatmeow/SNU-B36-50) for 50 epochs without freezing any layers. Details of the dataset are explained in [here](https://github.com/yodacatmeow/SNU-B36-50)
 - The model is evaluated via cross-validation
+- The following confusion matrix summarizes the cross-validation
 
+
+![](https://github.com/yodacatmeow/VGG16-SNU-B36-50/blob/master/figure/cfmtx.png)
 
 
 

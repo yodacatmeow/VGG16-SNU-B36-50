@@ -6,7 +6,7 @@
 - The following confusion matrix summarizes the cross-validation
 
 
-![](https://github.com/yodacatmeow/VGG16-SNU-B36-50/blob/master/figure/cfmtx.png)
+![](https://github.com/yodacatmeow/VGG16-SNU-B36-50/blob/master/figure/cfmtx2.png)
 
 
 

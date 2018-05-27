@@ -29,7 +29,7 @@ is_transfer_learn = True                        # Transfer the pre-trained weigh
 gen_data = True                                 # Generate dataset (.p format)?
 freeze_layer = False                            # Are you going to freeze certain layers? (Check optimizer code below)
 bn = False                                      # Turn on batch normalization?
-saver = False                                    # Are you going to save whole weights after training?
+saver = False                                   # Are you going to save whole weights after training?
 fold = 1                                        # Fold k; k-fold cross-validation
 
 rec_name = 'result/tr_nf_mspdb_2048_2048_592' + str(fold)                   # Save results as .csv;
@@ -101,7 +101,10 @@ with tf.device(gpu_device):
 
     # Optimization
     if freeze_layer:
-        train_op = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(loss, var_list=[vgg.fc3w, vgg.fc3b, vgg.fc4w, vgg.fc4b])
+        #train_op = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(loss, var_list=[vgg.fc3w, vgg.fc3b, vgg.fc4w, vgg.fc4b])
+        # Deeper
+        train_op = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(loss,var_list=[vgg.fc1w, vgg.fc1b,vgg.fc2w, vgg.fc2b,
+                                                                                                          vgg.fc3w, vgg.fc3b, vgg.fc4w, vgg.fc4b])
     # Update all layers
     else:
         train_op = tf.train.GradientDescentOptimizer(learning_rate=learning_rate).minimize(loss)

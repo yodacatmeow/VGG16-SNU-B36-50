@@ -11,7 +11,7 @@
 
 ## Notice
 
-- **VGG16-SNU-B36-50** will be merged into **IndoorNoise** repository in near future
+- **VGG16-SNU-B36-50** will be merged into **indoor-noise** repository in near future
 
 
 
